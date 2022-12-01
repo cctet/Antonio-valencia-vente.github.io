@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+
+}
+html{
+    height: 100%;
+    background-image: url('./nike\ force.png');
+    
+}
+
+body{
+    background-image: url(/nike\ force.png);
+    font-family: cursive;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+.header { 
+
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    grid-area: header;
+    background-color: rgba(169, 144, 238, 0.235);
+    text-shadow: 2px 2px aqua;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.navbar { 
+    size: 2rem;
+    grid-area: navbar;
+    background-color: rgb(173, 215, 230);
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(169, 144, 238, 0.138);
+}.tr2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black
+}
+.tr3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+}
+.tr4{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.main {
+    grid-area: main;
+    background-color: rgba(173, 216, 230, 0.234);
+}
+.footer {  height: 350px;
+    background-image: url() ;
+    grid-area: footer;
+    background-color: rgba(173, 230, 230, 0.233);
+    color: black; 
+}
+
+.imgnav{   
+    height: 100px;
+    width: 100px;
+}
+
+@media (min-width:600px) {
+    .grid-container{
+        grid-gap: 20px;
+        grid-template:
+        "header header" 100px
+        "navbar navbar" auto
+        "sidebar main" auto
+        "footer footer" 70px/
+        200px   auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px) {
+    .grid-container{
+        grid-template: 
+        "header header header" 100px
+        "navbar main sidebar" auto
+        "footer footer footer" 200px/
+        150px auto 200px;
+        overflow-y: scroll;
+        
+    }
+        
+}
+   
+   
